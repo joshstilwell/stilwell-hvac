@@ -28,10 +28,12 @@ export default async function ServiceAreaPage({ params }: Props) {
   if (!area) notFound();
 
   return (
-    <article className="space-y-8">
+    <article className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <div className="space-y-8">
       <AreaHero heading={area.heading} subheading={area.subheading} />
       <AreaContent body={area.body} />
       <CTA title={`Need HVAC service in ${area.heading.replace("Serving ", "")}?`} />
+      </div>
     </article>
   );
 }

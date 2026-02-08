@@ -26,27 +26,27 @@ const icons = {
 
 export function UtilityBar() {
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="bg-navy text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-2 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-        <p className="text-sm font-medium">
+        <p className="text-sm font-medium text-white/90">
           Serving Charlotte, Monroe, Concord & Surrounding Areas
         </p>
         <div className="flex flex-wrap items-center gap-1 text-sm sm:gap-0">
           {links.map(({ href, label, icon }, i) => (
             <span key={href} className="flex items-center">
-              {i > 0 && <span className="mx-2 hidden w-px self-stretch bg-white/40 sm:inline" aria-hidden />}
-              <Link href={href} className="flex items-center gap-1.5 hover:text-gray-300">
+              {i > 0 && <span className="mx-2 hidden w-px self-stretch bg-white/30 sm:inline" aria-hidden />}
+              <Link href={href} className="flex items-center gap-1.5 text-white/90 hover:text-accent">
                 {icons[icon as keyof typeof icons]}
                 <span>{label}</span>
               </Link>
             </span>
           ))}
-          <span className="mx-2 hidden w-px self-stretch bg-white/40 sm:inline" aria-hidden />
-          <a href={`tel:${SITE_PHONE_TEL}`} className="flex items-center gap-1.5 hover:text-gray-300">
+          <span className="mx-2 hidden w-px self-stretch bg-white/30 sm:inline" aria-hidden />
+          <a href={`tel:${SITE_PHONE_TEL}`} className="flex items-center gap-1.5 text-white/90 hover:text-accent">
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span>{SITE_PHONE_DISPLAY}</span>
+            <span className="font-semibold">{SITE_PHONE_DISPLAY}</span>
           </a>
         </div>
       </div>

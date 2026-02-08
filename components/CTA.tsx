@@ -12,12 +12,12 @@ export function CTA({
   label?: string;
 }) {
   return (
-    <section className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-8">
-      <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
-      <p className="mt-2 text-sm text-gray-700">{description}</p>
+    <section className="rounded-xl border border-border bg-cream px-6 py-8">
+      <h2 className="text-lg font-semibold text-navy">{title}</h2>
+      <p className="mt-2 text-sm text-muted-foreground">{description}</p>
       <Link
         href={href}
-        className="mt-4 inline-block rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800"
+        className="mt-4 inline-block rounded-md bg-accent px-4 py-2 text-sm font-bold text-navy transition hover:bg-accent-hover"
       >
         {label}
       </Link>

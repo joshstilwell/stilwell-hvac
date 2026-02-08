@@ -17,25 +17,27 @@ export default function HvacLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="space-y-6">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <div className="space-y-6">
       <Breadcrumb
         items={[
           { href: "/", label: "Home" },
           { href: "/hvac/heating/repair", label: "HVAC" },
         ]}
       />
-      <nav aria-label="HVAC services" className="flex flex-wrap gap-2 border-b border-gray-200 pb-4">
+      <nav aria-label="HVAC services" className="flex flex-wrap gap-2 border-b border-border pb-4">
         {hvacSubNav.map(({ href, label }) => (
           <Link
             key={href}
             href={href}
-            className="rounded-md px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            className="rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground hover:bg-cream hover:text-navy"
           >
             {label}
           </Link>
         ))}
       </nav>
       {children}
+      </div>
     </div>
   );
 }

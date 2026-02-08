@@ -11,13 +11,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 shadow-sm">
       <UtilityBar />
-      <div className="border-b border-gray-200 bg-white">
+      <div className="border-b border-border bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link href="/" className="flex shrink-0 items-center gap-3">
-            <span className="text-xl font-bold tracking-tight text-gray-900">
+            <span className="text-xl font-bold tracking-tight text-navy">
               Stilwell
             </span>
-            <span className="hidden text-lg font-bold text-gray-900 sm:inline">
+            <span className="hidden text-lg font-bold text-navy sm:inline">
               Heating & Cooling
             </span>
           </Link>
@@ -25,7 +25,7 @@ export function Header() {
             <Nav desktop />
           </div>
           <div className="hidden items-center gap-6 lg:flex">
-            <div className="flex flex-col items-center gap-0.5 text-sm text-gray-600">
+            <div className="flex flex-col items-center gap-0.5 text-sm text-muted-foreground">
               <div className="flex items-center gap-1.5">
                 <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -33,7 +33,7 @@ export function Header() {
                   <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
                   <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
                 </svg>
-                <span className="font-medium">Google Reviews</span>
+                <span className="font-medium text-navy">Google Reviews</span>
               </div>
               <span className="flex text-amber-500" aria-hidden>
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -45,7 +45,7 @@ export function Header() {
             </div>
             <Link
               href="/#contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-lg border-2 border-gray-900 bg-gray-900 px-4 py-2.5 text-sm font-bold uppercase tracking-wide text-white shadow-sm hover:bg-gray-800"
+              className="inline-flex shrink-0 items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-bold text-navy shadow-sm transition hover:bg-accent-hover"
             >
               <svg className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -57,7 +57,7 @@ export function Header() {
             type="button"
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-gray-700 hover:bg-gray-100 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-navy hover:bg-cream lg:hidden"
             onClick={() => setMobileOpen((o) => !o)}
           >
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,10 +71,10 @@ export function Header() {
         </div>
       </div>
       {mobileOpen && (
-        <div className="border-t border-gray-200 bg-white px-4 py-4 lg:hidden">
+        <div className="border-t border-border bg-white px-4 py-4 lg:hidden">
           <Nav onLinkClick={() => setMobileOpen(false)} desktop={false} />
-          <div className="mt-4 flex flex-col items-center gap-0.5 border-t border-gray-200 pt-4">
-            <span className="text-sm font-medium text-gray-600">Google Reviews</span>
+          <div className="mt-4 flex flex-col items-center gap-0.5 border-t border-border pt-4">
+            <span className="text-sm font-medium text-muted-foreground">Google Reviews</span>
             <span className="flex text-amber-500">
               {[1, 2, 3, 4, 5].map((i) => (
                 <svg key={i} className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
@@ -86,7 +86,7 @@ export function Header() {
           <Link
             href="/#contact"
             onClick={() => setMobileOpen(false)}
-            className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border-2 border-gray-900 bg-gray-900 px-4 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-sm hover:bg-gray-800"
+            className="mt-3 flex w-full items-center justify-center gap-2 rounded-md bg-accent px-4 py-3 text-sm font-bold text-navy shadow-sm transition hover:bg-accent-hover"
           >
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />

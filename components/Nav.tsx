@@ -26,8 +26,8 @@ type NavProps = {
 
 export function Nav({ onLinkClick, desktop = false }: NavProps) {
   const linkClass = desktop
-    ? "text-sm font-semibold text-gray-900 hover:text-gray-600"
-    : "block py-2 text-base font-semibold text-gray-900";
+    ? "text-sm font-semibold text-navy hover:text-accent-hover"
+    : "block py-2 text-base font-semibold text-navy";
 
   return (
     <nav className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6" aria-label="Main">

@@ -33,7 +33,7 @@ export function NavDropdown({
       aria-expanded={open}
       aria-haspopup="true"
       onClick={() => setOpen((o) => !o)}
-      className="inline-flex items-center gap-0.5 font-semibold text-gray-900 hover:text-gray-600"
+      className="inline-flex items-center gap-0.5 font-semibold text-navy hover:text-accent-hover"
     >
       {label}
       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -43,7 +43,7 @@ export function NavDropdown({
   );
 
   const menuClasses = desktop
-    ? "min-w-[180px] rounded-md border border-gray-200 bg-white py-1 shadow-lg"
+    ? "min-w-[180px] rounded-md border border-border bg-white py-1 shadow-lg"
     : "pl-4";
   const menu = (
     <ul className={menuClasses}>
@@ -55,7 +55,7 @@ export function NavDropdown({
               setOpen(false);
               onLinkClick?.();
             }}
-            className={desktop ? "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" : "block py-2 text-sm text-gray-600 hover:text-gray-900"}
+            className={desktop ? "block px-4 py-2 text-sm text-muted-foreground hover:bg-cream hover:text-navy" : "block py-2 text-sm text-muted-foreground hover:text-navy"}
           >
             {itemLabel}
           </Link>
@@ -84,7 +84,7 @@ export function NavDropdown({
   }
 
   return (
-    <div ref={ref} className="border-b border-gray-200 last:border-b-0">
+    <div ref={ref} className="border-b border-border last:border-b-0">
       {trigger}
       {open && <div className="pb-2 pt-1">{menu}</div>}
     </div>
