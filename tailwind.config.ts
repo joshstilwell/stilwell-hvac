@@ -8,7 +8,25 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        navy: {
+          DEFAULT: "var(--navy)",
+          light: "var(--navy-light)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          hover: "var(--accent-hover)",
+        },
+        cream: "var(--cream)",
+        muted: {
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
+        },
+        border: "var(--border)",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+      },
     },
   },
   plugins: [],

@@ -5,11 +5,11 @@ type AreaHeroProps = {
 
 export function AreaHero({ heading, subheading }: AreaHeroProps) {
   return (
-    <div className="border-b border-gray-200 pb-8">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+    <div className="border-b border-border pb-8">
+      <h1 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl">
         {heading}
       </h1>
-      <p className="mt-2 text-lg text-gray-700">{subheading}</p>
+      <p className="mt-2 text-lg text-muted-foreground">{subheading}</p>
     </div>
   );
 }

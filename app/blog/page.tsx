@@ -7,13 +7,15 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="space-y-8">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-        Blog
-      </h1>
-      <p className="text-lg text-gray-700">
-        Coming soon. We&apos;ll share tips, news, and updates here once our blog is connected to a CMS.
-      </p>
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <div className="space-y-8">
+        <h1 className="text-3xl font-bold tracking-tight text-navy">
+          Blog
+        </h1>
+        <p className="text-lg text-muted-foreground">
+          Coming soon. We&apos;ll share tips, news, and updates here once our blog is connected to a CMS.
+        </p>
+      </div>
     </div>
   );
 }
